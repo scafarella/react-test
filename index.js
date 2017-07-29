@@ -1,3 +1,6 @@
+require('isomorphic-fetch');
+require('es6-promise').polyfill();
+
 const express = require('express')
 const app = express()
 
@@ -9,8 +12,13 @@ app.get('/', function (req, res) {
 })
 
 app.get('/api/products', (req,res) => {
-  //fetch some Products
-  res.json({test:'test'})
+  fetch('http://www.matchesfashion.com/nms/ajax/p/1095470,1095483,1095472,1095467')
+  .then(response => response.json())
+  .then(data => res.json(data))
+  .catch(err => {
+    res.json({code: 'GENERIC_ERROR', error:'Generic Error'})
+    console.error(err)
+  })
 })
 
 app.listen(3000, function () {

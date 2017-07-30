@@ -1,0 +1,106 @@
+body{
+  margin:0;
+  padding: 0;
+}
+.hide{
+  visibility:hidden;
+}
+.clear{
+  clear:left;
+}
+.wrapper{
+  width: 98%;
+  margin: 0 auto;
+}
+.header{
+  position: fixed;
+  border-bottom: 2px solid black;
+  width: 100%;
+  background-color: white;
+  padding-top: 20px;
+  height:85px;
+  z-index:1000;
+}
+.header .top{
+  width: 26%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.header .top span{
+  margin-right: 3%;
+}
+.header .top .site{
+  width: 70%;
+}
+.header .top h1{
+  display: inline;
+}
+.nav_wrapper{
+  display:table;
+  margin: 0 auto;
+}
+.nav {
+  margin-left: auto;
+}
+.nav li {
+  display: inline;
+  margin-right: 10px;
+}
+.pulldown{
+  display:block;
+  height:120px;
+}
+.products{
+  min-height:800px;
+}
+.product{
+  width:25%;
+  float:left;
+}
+
+.product img{
+  width:100%;
+}
+.product .options{
+  top: 390px;
+  position: relative;
+  width: 10%;
+  left: 82%;
+  list-style-type: none;
+}
+
+.product .options li{
+  width: 10%;
+}
+
+
+.product .description {
+    width: 50%;
+    margin: 0 auto;
+}
+.product .options .soldout {
+  color: grey;
+}
+.price .sale{
+  color:red;
+}
+
+.footer{
+  background-color:#f1f1f1;
+}
+.footer ul{
+  list-style-type: none;
+  padding: 10px 0;
+}
+.footer .column{
+  float:left;
+  width:20%;
+}
+.footer .links_container{
+  width: 70%;
+  border-bottom: 1px solid black;
+  margin-bottom: 45px;
+}
+.footer .closing{
+  margin-left: 15%;
+}

@@ -6,6 +6,7 @@ const app = express()
 
 app.set('view engine', 'pug')
 app.use(express.static('dist'))
+app.use(express.static('css'))
 
 app.get('/', function (req, res) {
    res.render('index', { title: 'Hey', message: 'Hello there!' })

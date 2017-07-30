@@ -26,11 +26,12 @@ class ProductList extends Component {
     if(this.state.productList == null){
         return <div>...waiting</div>
     }else{
-      return <div>
-      {this.state.productList.map(function(p){
-        return <Product key={p.code}
-              data={p} />
-      })}
+      return <div className="products">
+        {this.state.productList.map(function(p){
+          return <Product key={p.code}
+                data={p} />
+        })}
+        <div className="clear"></div>
       </div>
     }
   }

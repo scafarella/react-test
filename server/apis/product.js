@@ -1,3 +1,5 @@
+require('isomorphic-fetch');
+require('es6-promise').polyfill();
 const HttpProxyAgent = require('http-proxy-agent');
 
 const product = {

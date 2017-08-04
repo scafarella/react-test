@@ -1,4 +1,5 @@
-var assert = require('assert');
+const assert = require('assert')
+const product = require('../server/apis/product')
 
 describe('Array', function() {
   describe('#indexOf()', function() {
@@ -8,9 +9,11 @@ describe('Array', function() {
   });
 });
 
-describe('Index.js', () => {
-  it('get api', () => {
-    // should set the timeout of this test to 1000 ms; instead will fail
-    assert.ok(true);
+describe('Product API', () => {
+  it('all', () => {
+      product.all()
+      .then(data => {
+          assert.equal(3, data.length)
+      })
   });
 });

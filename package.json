@@ -3,9 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "mocha",
     "build": "webpack --devtool source-map --config config/webpack.config.js",
-    "start": "node ./index.js"
+    "start": "node ./index.js",
+    "coverage": "istanbul cover node_modules/.bin/_mocha -- -- -u exports -R test test/**/*"
   },
   "author": "",
   "license": "ISC",
@@ -19,6 +20,7 @@
     "babel-preset-es2016": "^6.24.1",
     "es6-promise": "^4.1.1",
     "express": "^4.15.3",
+    "http-proxy-agent": "^2.0.0",
     "isomorphic-fetch": "^2.2.1",
     "pug": "^2.0.0-rc.2",
     "react": "^15.6.1",
@@ -28,6 +30,7 @@
     "babel-loader": "^7.1.1",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
+    "mocha": "^3.5.0",
     "webpack": "^3.4.1"
   }
 }
